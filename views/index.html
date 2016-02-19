@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>P|D Pocket</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<script src="js/d3.min.js"></script>
+  	<script src="js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<link rel="stylesheet" href="css/mystyle.css" />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.4.0/turf.min.js'></script>
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+	<script type="text/javascript">
+	  var userip;
+	</script>
+	<script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+
+</head>
+
+<body>
+	<div class = "mainbody">
+		<div class="topbar">
+			<div id="menu">
+				<img src="img/menuicon.png">
+			</div>
+			<p class = "toptitle">P | D Pocket</p>
+			<div class = "submenu">
+				<p id = "smap">MAP</p>
+				<P id = "scircle">CIRCLE</P>
+				<P id = "stxt">TXTS</P>
+
+			</div>
+
+		</div>
+		<div class="topgraph">
+			<div id="map"></div>
+			<!--<div id = "overlay"></div>-->
+			<svg id="circlesvg" class = "canvas">
+
+
+			</svg>
+			<p id = "arrow">N</p>
+		</div>
+		<div class="timeline_recent">
+			<svg id="recentsvg" class = "canvas">
+
+
+			</svg>
+
+
+		</div>
+		<div class="timeline_important">
+			<div> <p></p> </div>
+			<p></p>
+			<svg id="impsvg" class = "canvas">
+
+
+			</svg>
+		</div>
+		<div class = "txt">
+			<div class = "inputarea">
+				<textarea rows="5" cols="50" id = "input"></textarea>
+				<div class = "square"><p id = "mood">Mid</p></div>
+				<div class = "square"><p id = "submit">Submit</p></div>
+				<div id="expandmood">
+					<p>Great</p>
+					<p>Good</p>
+					<p>Mid</p>
+					<p>Low</p>
+					<p>Worst</p>
+
+
+
+				</div>
+			</div>
+			<div class="messages">
+
+
+			</div>
+		</div>
+
+		
+
+
+	</div>
+	<script src="js/myapp.js"></script>
+	<script src="js/control.js"></script>
+</body>
+</html>
